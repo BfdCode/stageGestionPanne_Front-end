@@ -10,16 +10,18 @@ import {
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SettingsIcon from "@mui/icons-material/Settings";
-import PeopleIcon from "@mui/icons-material/People";
+import HomeIcon from "@mui/icons-material/Home";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import HomeIcon from "@mui/icons-material/Home";
+
 import "./Sidebar4.css";
+import logo from "../assets/UASZ1.png"; 
 
 const navItems = [
-  { name: "Accueil", icon: <HomeIcon />, path: "/" },
+  { name: "Accueil", icon: <HomeIcon />, path: "/acueillGestion" },
   { name: "Dashboard", icon: <DashboardIcon />, path: "/dashboard" },
-  { name: "Utilisateurs", icon: <PeopleIcon />, path: "/users" },
+  { name: "Technicien", icon: <EngineeringIcon />, path: "/users" },
   { name: "Paramètres", icon: <SettingsIcon />, path: "/settings" },
 ];
 
@@ -34,10 +36,17 @@ export const Sidebar4 = () => {
   return (
     <aside className={`sidebar-4 ${open ? "open" : "closed"}`}>
       <div className="inner">
+        {/* Logo */}
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="sidebar-logo" />
+        </div>
+
+        {/* Bouton d'ouverture/fermeture */}
         <IconButton onClick={toggleSidebar} className="toggle-btn">
           {open ? <ChevronLeftIcon /> : <MenuIcon />}
         </IconButton>
 
+        {/* Menu de navigation */}
         <nav className="menu">
           <List>
             {navItems.map((item, index) => (

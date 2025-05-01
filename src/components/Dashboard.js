@@ -10,55 +10,57 @@ const Dashboard = () => {
   const [stats, setStats] = useState({
     categories: [
       { category: "Électroménager", count: 0 },
-      { category: "Électronique", count: 0 },
-      { category: "Électricité", count: 0 },
+      { category: "Électronique", count: 9 },
+      { category: "Électricité", count: 6 },
       { category: "Plomberie", count: 0 },
       { category: "Menuiserie", count: 0 },
       { category: "Connexion", count: 0 },
     ],
     status: {
-      active: 0,
-      resolved: 0,
-      pending: 0,
-      urgent: 0,
+      active: 2,
+      resolved: 1,
+      pending: 2,
+      urgent: 2,
     },
     evolution: [
-      {jour: "1", count: 0 },
+      {jour: "1", count: 3 },
       {jour: "2", count: 0 },
       {jour: "3", count: 0 },
       {jour: "4", count: 0 },
-      {jour: "5", count: 0 },
+      {jour: "5", count: 0},
       {jour: "6", count: 0 },
       {jour: "7", count: 0 },
     ],
   });
 
   return (
-    <Box p={3}>
+   <>
+   <br></br>
+   <Box p={3}>
       {/* Statistiques des pannes */}
       <Box display="flex" justifyContent="space-between" mb={3}>
-        <Card sx={{ flex: 1, mx: 1, textAlign: "center", bgcolor: "#c9f2cb" }}>
+        <Card sx={{ flex: 1, mx: 1, textAlign: "center", background: "linear-gradient(135deg,rgb(240, 237, 206),rgb(152, 168, 8))" }}>
           <CardContent>
             <WarningIcon fontSize="large" color="error" />
             <Typography variant="h6">Actives</Typography>
             <Typography variant="h4">{stats.status.active}</Typography>
           </CardContent>
         </Card>
-        <Card sx={{ flex: 1, mx: 1, textAlign: "center", bgcolor: "#c9f2cb" }}>
+        <Card sx={{ flex: 1, mx: 1, textAlign: "center", background: "linear-gradient(135deg, #c9f2cb, #108b31)" }}>
           <CardContent>
             <CheckCircleIcon fontSize="large" color="success" />
             <Typography variant="h6">Résolues</Typography>
             <Typography variant="h4">{stats.status.resolved}</Typography>
           </CardContent>
         </Card>
-        <Card sx={{ flex: 1, mx: 1, textAlign: "center", bgcolor: "#c9f2cb" }}>
+        <Card sx={{ flex: 1, mx: 1, textAlign: "center", background: "linear-gradient(135deg,rgb(211, 233, 185),rgb(106, 139, 16))" }}>
           <CardContent>
             <HourglassEmptyIcon fontSize="large" color="warning" />
             <Typography variant="h6">En attente</Typography>
             <Typography variant="h4">{stats.status.pending}</Typography>
           </CardContent>
         </Card>
-        <Card sx={{ flex: 1, mx: 1, textAlign: "center", bgcolor: "#c9f2cb" }}>
+        <Card sx={{ flex: 1, mx: 1, textAlign: "center", background: "linear-gradient(135deg,rgb(239, 189, 189),rgb(165, 7, 18))" }}>
           <CardContent>
             <ReportProblemIcon fontSize="large" color="error" />
             <Typography variant="h6">Urgentes</Typography>
@@ -96,6 +98,7 @@ const Dashboard = () => {
         </Card>
       </Box>
     </Box>
+   </>
   );
 };
 

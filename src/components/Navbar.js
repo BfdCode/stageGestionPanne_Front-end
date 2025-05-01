@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#edeeec" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h6"  sx={{ color: "green" }} >GESTION DES PANNES</Typography>
+        <Typography variant="h6"  sx={{ color: "green" }} ><marquee>GESTION DES PANNES UASZ</marquee></Typography>
 
         {/* <Search>
           <SearchInput placeholder="Rechercher..." />
@@ -99,7 +99,7 @@ const Navbar = () => {
         <div>
           {/* Icône de Notifications */}
           <IconButton sx={{ color: "green", marginRight: "10px" }}>
-            <Badge badgeContent={0} color="error">
+            <Badge badgeContent={2} color="error">
               <NotificationsIcon />
             </Badge>
           </IconButton>

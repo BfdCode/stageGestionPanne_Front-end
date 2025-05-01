@@ -173,3 +173,38 @@
   border-radius: 8px;
  
 }
+
+/* Conteneur du logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  transition: padding 0.3s;
+}
+
+/* Logo image */
+.sidebar-logo {
+  width: 50px; /* Taille du logo lorsque la sidebar est fermée */
+  height: 90px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Lorsque la sidebar est ouverte */
+.sidebar-4.open .sidebar-logo {
+  width: 120px; /* Taille plus grande lorsque la sidebar est ouverte */
+  height: 90px;
+}
+
+/* Lorsque la sidebar est fermée */
+.sidebar-4.closed .logo-container {
+  padding: 5px 0; /* Réduit l'espace autour du logo */
+}
+
+.sidebar-4.closed .sidebar-logo {
+  width: 40px; /* Logo plus petit quand la sidebar est fermée */
+  height: 40px;
+}
+
+

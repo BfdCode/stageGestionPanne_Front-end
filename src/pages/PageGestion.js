@@ -3,6 +3,7 @@ import {Sidebar4} from "../components/Sidebar4";
 import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import UsersTable from "./usersTable";
+import Homegestion from "./HomeGestion";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function PageGestion() {
@@ -16,7 +17,10 @@ function PageGestion() {
            <Routes>
               <Route path="/dashboard" element={<Dashboard/>} />
               <Route path="/users" element={<UsersTable/>} />
-            </Routes>
+              <Route path="/acueillGestion" element={<Homegestion/>} />
+
+
+           </Routes>
           
 
         </div>
